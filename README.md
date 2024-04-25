@@ -2,4 +2,5 @@
 
 [GitHub repository URL](https://github.com/Sammarger/1004_FrontEnd.git)
 
-## Additional Work
+## HTML Pages
+[People Search](people-search.html) [Vehicle Search](vehicle-search.html) [Add a Vehicle](add-a-vehicle.html)
