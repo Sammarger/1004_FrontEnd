@@ -1,25 +1,52 @@
-body {
+/* General Styles */
+body, html {
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
 }
 
-header, .sidebar, .main-content, footer {
+/* Header and Footer Styles */
+header, footer {
     border: 1px solid black;
     padding: 20px;
 }
 
+header {
+    align-items: center;
+    justify-content: center;
+
+}
+ul.navigation {
+    display: inline-flex;
+}
+
+/* Container Styles */
 .container {
     display: flex;
+    flex-direction: row;
+    min-height: calc(100vh - 120px); /* Adjust based on header and footer height */
+    padding: 20px;
 }
 
-.sidebar {
-    width: 20%;
+/* Sidebar Styles */
+aside {
+    width: 14%; /* Width ratio of 14% */
+    border: 1px solid black;
+    padding: 20px;
+    margin-right: 10px;
 }
 
-.main-content {
-    width: 80%;
+/* Main Content Styles */
+main {
+    width: 86%; /* Width ratio of 86% */
+    border: 1px solid black;
+    padding: 20px;
+    margin-left: 10px;
 }
 
 footer {
     width: 100%;
+    padding: 20px;
 }
+
