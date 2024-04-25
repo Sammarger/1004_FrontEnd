@@ -9,16 +9,23 @@ body, html {
 /* Header and Footer Styles */
 header, footer {
     border: 1px solid black;
-    padding: 20px;
 }
 
 header {
-    align-items: center;
-    justify-content: center;
-
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px;
 }
+
 ul.navigation {
-    display: inline-flex;
+    display: flex;
+    justify-content: center;
+}
+
+link {
+    display: flex;
+    flex-grow: 1;
 }
 
 /* Container Styles */
