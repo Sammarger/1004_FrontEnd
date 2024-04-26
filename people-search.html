@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>People Search</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="backend.js" defer></script>
 </head>
 <body>
     <header>
@@ -15,17 +16,25 @@
             <link href="add-a-vehicle.html">Add a vehicle</li>
         </ul>
     </header>
-    <div class="container">
-        <aside class="sidebar">
-            <h2>Sidebar</h2>
-            <p>This is the sidebar content.</p>
-        </aside>
-        <main class="main-content">
-            <p>Search by driver name:</p>
-            <p>Search by driving license number:</p>
-            <button type="submit">Submit</button>
-        </main>
-    </div>
+    <aside class="sidebar">
+        <h2>Sidebar</h2>
+    </aside>
+    <main class="main-content">
+        <form>
+            <div>
+                <label for="name">Search by driver name</label>
+                <input id="name" type="text"/>
+            </div>
+            <div>
+                <label for="license">Search by license number</label>
+                <input id="license" type="text"/>
+            </div>
+            <div>
+                <input id="submit" type="submit"/>
+            </div>
+        </form>
+        <p></p>
+    </main>
     <footer>
         <h2>Footer</h2>
     </footer>
