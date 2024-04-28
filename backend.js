@@ -8,38 +8,30 @@ const supabase = createClient(supabaseUrl, supabaseKey)
 const form = document.querySelector("form");
 const name = document.getElementById("name");
 const license = document.getElementById("license");
-const para = document.querySelector("p");
+var results = document.getElementById("results");
+var message = document.querySelector("p")
 var tableOutput;
-let matchFound = false;
+let matchFound;
 
-/*function findNameMatch(item) {
-    let matchFound = false;
-    let nameString = item["Name"];
-    let finalString = nameString.replace(/"/g, '');
-
-    if(name.value === finalString) {
-        para.textContent = `${name.value}`;
-    }
-
-}*/
+let lowerCaseName = name.value.replace(/[A-Z]/g, (match) => match.toLowerCase());
 
 function matchingItems(item) {
     // Split the string into an array using space as the separator
+    item.name.replace(/[A-Z]/g, (match) => match.toLowerCase());
+
     const nameParts = item.name.split(" ");
 
     const stringLine = "Name: " + item.name + ", Address: " + item.address + ", DoB: " + item.DoB +
     ", License Number: "+ item.licenseNumber + ", Expiry Date: " + item.expiryDate + "<br>";
 
-    // Use array destructuring to assign the first and last name to variables
-    const [firstName, lastName] = nameParts;
-    if(name.value === item.name || license.value === item.licenseNumber) {
+    if(lowerCaseName === item.name || license.value === item.licenseNumber) {
         tableOutput = tableOutput + stringLine;
         matchFound = true;
      } else {
-            if(nameParts[0] === name.value) {
+            if(nameParts[0] === lowerCaseName) { // First name
                 tableOutput = tableOutput + stringLine;
                 matchFound = true;
-            } else if(nameParts[1] === name.value){
+            } else if(nameParts[1] === lowerCaseName){ // Surname
                 tableOutput = tableOutput + stringLine;
                 matchFound = true;
             } 
@@ -60,7 +52,7 @@ function createPerson(item) {
 
 async function fetchData() {
     const {data, error} = await supabase.from('People').select('');
-   matchFound = false;
+    matchFound = false;
     tableOutput = "";
 
     for(const item of data){
@@ -69,10 +61,11 @@ async function fetchData() {
     }
 
     if(matchFound === false) {
-        tableOutput = "No result returned from that search.";
+        message.textContent = `No result found ${name.value}`;
+    } else {
+        message.textContent = "Search successful";
+        //results.innerHTML = tableOutput;
     }
-    para.innerHTML = tableOutput;
-
 }
 
 form.addEventListener("submit", (e) => {
