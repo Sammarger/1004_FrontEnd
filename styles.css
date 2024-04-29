@@ -17,12 +17,22 @@ header, .sidebar, main, footer {
     margin: 20px;
 
     display: flex;
-
 }
 
 header {
     grid-area: header;
     justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+}
+
+.navigation {
+    width: 100%;
+    display: flex; /* Use flex display */
+    justify-content: center;
+    gap: 20%;
+    padding: 20px;
 }
    
 .sidebar {
@@ -35,6 +45,7 @@ header {
 main {
     grid-area: main;
     flex-grow: 1;
+    flex-direction: column;
 
 }
    
