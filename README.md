@@ -9,4 +9,3 @@
 | [URL](https://sammarger.github.io/1004_FrontEnd/people-search.html) | [URL](https://sammarger.github.io/1004_FrontEnd/vehicle-search.html) | [URL](https://sammarger.github.io/1004_FrontEnd/add-a-vehicle.html)|
 | [Source](people-search.html) | [Source](vehicle-search.html)| [Source](add-a-vehicle.html)|
 
-### HTML Source pages
