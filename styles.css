@@ -28,6 +28,8 @@ header {
 
 .navigation {
     width: 100%;
+    list-style-type: none;
+
     display: flex; /* Use flex display */
     justify-content: center;
     gap: 20%;
