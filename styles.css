@@ -2,7 +2,7 @@
 
 body {
     display: grid;
-    height:auto;
+    height:55vw;
     grid-template-columns: 1fr 5fr 1fr; 
     grid-template-rows: auto 1fr auto; 
     grid-template-areas:
