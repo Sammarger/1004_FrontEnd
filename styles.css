@@ -59,8 +59,8 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
-    height: 50%;
+    width: fit-content;
+    height: fit-content;
 }
 
 @media (max-width: 500px) {
