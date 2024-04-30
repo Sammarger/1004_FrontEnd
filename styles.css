@@ -56,13 +56,9 @@ footer {
 }
 
 img {
-    display: flex;
-    justify-content: center;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
-    display: inline-block;
-    align-items: center;
-    width: min-content;
-    height: min-content;
 }
 
 @media (max-width: 500px) {
