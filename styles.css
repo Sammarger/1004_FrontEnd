@@ -1,6 +1,6 @@
 /* General Styles */
 
-body {
+.container {
     display: grid;
     height:55vw;
     grid-template-columns: 1fr 5fr 1fr; 
