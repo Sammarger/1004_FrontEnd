@@ -6,7 +6,7 @@
     <title>Add a Vehicle</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body id="container">
     <header>
         <h1>Add a Vehicle</h1>
         <ul class="navigation">
@@ -15,16 +15,21 @@
             <li><a href="add-a-vehicle.html">Add a vehicle</a></li>
         </ul>
     </header>
-    <div class="container">
-        <aside class="sidebar">
-            <h2>Sidebar</h2>
-            <p>This is the sidebar content.</p>
-        </aside>
-        <main class="main-content">
-            <p>Search by driver name:</p>
-            <p>Search by driving license number:</p>
-        </main>
-    </div>
+    <aside class="sidebar">
+        <img src="https://cdn.pixabay.com/photo/2018/02/23/22/05/brain-3176780_1280.png" alt="brain">
+    </aside>
+    <main class="main-content">
+        <form>
+            <div>
+                <label for="rego">Search by registration number</label>
+                <input id="rego" type="text"/>
+            </div>
+            <div>
+                <input id="submit" type="submit"/>
+            </div>
+        </form>
+        <p></p>
+    </main>
     <footer>
         <h2>Footer</h2>
         <p>This is the footer content.</p>
