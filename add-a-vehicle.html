@@ -20,7 +20,7 @@
         <img src="https://cdn.pixabay.com/photo/2018/02/23/22/05/brain-3176780_1280.png" alt="brain">
     </aside>
     <main class="main-content">
-        <form>
+        <form id="vehicle-form">
             <div>
                 <label for="rego">Registration number</label>
                 <input id="rego" type="text"/>
@@ -45,7 +45,8 @@
                 <input id="add" type="submit" value="Add">
             </div>
         </form>
-        <form style="display: block;">
+        <form id="people-form" style="display: none;">
+            <h4>Person entered does not exist on the database, please enter their information:</h4>
             <div>
                 <label for="personid">Person ID</label>
                 <input id="personid" type="text"/>
