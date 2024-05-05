@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add a Vehicle</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="add-a-vehicle-backend.js" type="module"></script>
 </head>
 <body id="container">
     <header>
@@ -21,18 +22,62 @@
     <main class="main-content">
         <form>
             <div>
-                <label for="rego">Search by registration number</label>
+                <label for="rego">Registration number</label>
                 <input id="rego" type="text"/>
             </div>
             <div>
-                <input id="submit" type="submit"/>
+                <label for="make">Vehicle Make</label>
+                <input id="make" type="text"/>
+            </div>
+            <div>
+                <label for="model">Model</label>
+                <input id="model" type="text"/>
+            </div>
+            <div>
+                <label for="colour">Colour</label>
+                <input id="colour" type="text"/>
+            </div>
+            <div>
+                <label for="owner">Vehicle owner</label>
+                <input id="owner" type="text"/>
+            </div>
+            <div>
+                <input id="add" type="submit" value="Add">
+            </div>
+        </form>
+        <form style="display: block;">
+            <div>
+                <label for="personid">Person ID</label>
+                <input id="personid" type="text"/>
+            </div>
+            <div>
+                <label for="name">Name</label>
+                <input id="name" type="text"/>
+            </div>
+            <div>
+                <label for="address">Address</label>
+                <input id="address" type="text"/>
+            </div>
+            <div>
+                <label for="dob">Date of birth</label>
+                <input id="dob" type="text"/>
+            </div>
+            <div>
+                <label for="license">License number</label>
+                <input id="license" type="text"/>
+            </div>
+            <div>
+                <label for="expire">Expiry date</label>
+                <input id="expire" type="text"/>
+            </div>
+            <div>
+                <input id="add" type="submit" value="Add owner">
             </div>
         </form>
         <p></p>
     </main>
     <footer>
         <h2>Footer</h2>
-        <p>This is the footer content.</p>
     </footer>
 </body>
 </html>
