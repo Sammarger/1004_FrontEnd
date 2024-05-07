@@ -1,4 +1,5 @@
 import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm';
+import { text } from 'stream/consumers';
 
 const supabaseUrl = 'https://ztncxmihptraxhebbwqd.supabase.co';
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp0bmN4bWlocHRyYXhoZWJid3FkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTQwNjI3NzAsImV4cCI6MjAyOTYzODc3MH0.DYV7wVkw2fUq2sVpmzTf4X2GPl1V0U6VSkJgETgWCm8';
@@ -22,7 +23,8 @@ const license = document.getElementById("license");
 const expire = document.getElementById("expire");
 
 // Other
-var message = document.querySelector("p");
+var message = document.getElementById("message");
+var errorMessage = document.getElementById("error-message");
 
 
 
@@ -55,7 +57,10 @@ function validVehicleFormInputs(){ // Makes sure there are no null values entere
 
 async function addVehicle(ownerID){ // Add vehicle to table
     const { error } = await supabase.from('Vehicle')
-    .insert({ VehicleID: rego.value, Make: make.value, Model: model.value, Colour: colour.value, OwnerID: ownerID})
+    .insert({ VehicleID: rego.value, Make: make.value, Model: model.value, Colour: colour.value, OwnerID: ownerID});
+    
+    errorMessage.textContent = `${error.value}`;
+
 }
 
 
