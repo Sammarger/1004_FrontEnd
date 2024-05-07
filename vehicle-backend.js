@@ -12,8 +12,8 @@ var tableOutput;
 
 
 function matchingItems(item) {
-    const stringLine = "<div>Registration Number: " + item.vehicleID + ", Make: " + item.make + ", Model: " + item.model +
-    ", Colour: "+ item.colour + ", Vehicle Owner: " + item.owner + "</div>";
+    const stringLine = "Registration Number: " + item.vehicleID + ", Make: " + item.make + ", Model: " + item.model +
+    ", Colour: "+ item.colour + ", Vehicle Owner: " + item.owner;
 
     if(rego.value === item.vehicleID) {
         tableOutput = tableOutput + stringLine;
