@@ -1,3 +1,4 @@
+import { table } from 'console';
 import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm';
 
 const supabaseUrl = 'https://ztncxmihptraxhebbwqd.supabase.co';
@@ -13,9 +14,10 @@ var tableOutput;
 
 function matchingItems(item) {
     const stringLine = "Registration Number: " + item.vehicleID + ", Make: " + item.make + ", Model: " + item.model +
-    ", Colour: "+ item.colour + ", Vehicle Owner: " + item.owner;
+    ", Colour: "+ item.colour + ", Vehicle Owner: " + item.owner + "</div>";
 
     if(rego.value === item.vehicleID) {
+        tableOutput = tableOutput + "<div>";
         tableOutput = tableOutput + stringLine;
     }
 }
