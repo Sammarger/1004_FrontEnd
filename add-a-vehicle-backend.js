@@ -109,8 +109,8 @@ function validPeopleFormInputs(){
         return true;
     }
 }
-async function addPerson(){ // Add vehicle to table
-    const { error } = await supabase.from('Vehicle')
+async function addPerson() { // Add vehicle to table
+    const { error } = await supabase.from('People')
     .insert({ PersonID: personID.value, Name: name.value, Address: address.value, DOB: dob.value, LicenseNumber: license.value, ExpiryDate: expire.value})
 }
 
