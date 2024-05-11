@@ -109,9 +109,10 @@ function validPeopleFormInputs(){
         return true;
     }
 }
-async function addPerson() { // Add vehicle to table
+async function addPerson() { // Add person to table, and then add vehicle to table
     const { error } = await supabase.from('People')
     .insert({ PersonID: personID.value, Name: name.value, Address: address.value, DOB: dob.value, LicenseNumber: license.value, ExpiryDate: expire.value})
+    
 }
 
 peopleForm.addEventListener("submit", async(e) => {
@@ -119,7 +120,14 @@ peopleForm.addEventListener("submit", async(e) => {
 
     if(validPeopleFormInputs()){
         await addPerson();
-        message.textContent = "Success";
+        
+        if(validVehicleFormInputs())
+            {
+                await addVehicle(ownerID);
+                message.textContent = `Vehicle added successfully`;
+            } else {
+                message.textContent = "Error";
+            }
     } else {
         message.textContent = "Error";
     }
