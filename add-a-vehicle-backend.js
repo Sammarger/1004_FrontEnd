@@ -123,7 +123,7 @@ peopleForm.addEventListener("submit", async(e) => {
         
         if(validVehicleFormInputs())
             {
-                await addVehicle(ownerID);
+                await addVehicle(personID.value);
                 message.textContent = `Vehicle added successfully`;
             } else {
                 message.textContent = "Error";
