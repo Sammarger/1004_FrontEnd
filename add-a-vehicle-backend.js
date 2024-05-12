@@ -67,9 +67,6 @@ function validVehicleFormInputs(){ // Makes sure there are no null values entere
 async function addVehicle(ownerID){ // Add vehicle to table
     const { error } = await supabase.from('Vehicle')
     .insert({ VehicleID: rego.value, Make: make.value, Model: model.value, Colour: colour.value, OwnerID: ownerID});
-    
-    errorMessage.textContent = `${error.value}`;
-
 }
 
 
@@ -120,7 +117,6 @@ peopleForm.addEventListener("submit", async(e) => {
 
     if(validPeopleFormInputs()){
         await addPerson();
-        
         if(validVehicleFormInputs())
             {
                 await addVehicle(personID.value);
