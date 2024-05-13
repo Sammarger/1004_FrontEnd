@@ -115,15 +115,16 @@ async function addPerson() { // Add person to table, and then add vehicle to tab
 peopleForm.addEventListener("submit", async(e) => {
     e.preventDefault();
 
-    if(validPeopleFormInputs()){
+    if(validPeopleFormInputs()){ // If all the values in the form have been filled, call add person
         await addPerson();
-        if(validVehicleFormInputs())
+        if(validVehicleFormInputs()) // When add person is completed and the owner name is now 
+                                     // in the system, added the vehicle aswell
             {
-                await addVehicle(personID.value);
+                await addVehicle(personID.value); // Using the user input person id
                 message.textContent = `Vehicle added successfully`;
             } else {
-                message.textContent = "Error";
-            }
+                message.textContent = "Error"; // Otherwise throw an error, as one of the forms
+            }                                  // is not complete
     } else {
         message.textContent = "Error";
     }

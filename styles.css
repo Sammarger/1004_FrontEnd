@@ -43,10 +43,6 @@ header {
     display: flex;
     grid-area: sidebar;
     flex-grow: 1;
-
-
-
-
 }
    
 main {

@@ -10,16 +10,15 @@ const name = document.getElementById("name");
 const license = document.getElementById("license");
 var results = document.getElementById("results");
 var message = document.querySelector("p");
-var tableOutput;
+var tableOutput; // Used to add all potential matches to the final results section
 let matchFound;
 
-function replaceWithLowerCase(item) {
+function replaceWithLowerCase(item) { // Function only used for turning string lower case, called many times
     let lowerCaseItem = item.replace(/[A-Z]/g, (match) => match.toLowerCase());
     return lowerCaseItem;
 }
 
 function matchingItems(item) {
-    // Split the string into an array using space as the separator
 
     var lowerCaseName =replaceWithLowerCase(name.value);
     var lowerCaseItemName = replaceWithLowerCase(item.name);
