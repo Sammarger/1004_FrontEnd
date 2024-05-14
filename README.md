@@ -11,11 +11,11 @@
 
 ### Criteria
 
-1. Three HTML pages
+1 - Three HTML pages
 
-2. Files named correctly
+2 - Files named correctly
 
-3. Meta data contains language, character set and title
+3 - Meta data contains language, character set and title
 
 People Search:
 ```
@@ -45,12 +45,12 @@ Add a Vehicle:
     <title>Add a Vehicle</title>
 ```
 
-4. Heading and text elements used correctly
+4 - Heading and text elements used correctly
 ```
     <h1>Add a Vehicle</h1>
 ```
 
-5. Unordered list used to create navigation links
+5 - Unordered list used to create navigation links
 
 ```
 <ul class="navigation">
@@ -60,9 +60,9 @@ Add a Vehicle:
 </ul>
 ```
 
-6. All pages share the same navigation links
+6 - All pages share the same navigation links
 
-7. Each page has four sections: header, footer, sidebar, main
+7 - Each page has four sections: header, footer, sidebar, main
 ```
 <header>
     <h1>Add a Vehicle</h1>
@@ -137,21 +137,21 @@ Add a Vehicle:
     <h2>Samuel Margerison - COMP1004</h2>
 </footer>
 ```
-8. At least one image or video on each page
+8 - At least one image or video on each page
 ```
 <img src="https://cdn.pixabay.com/photo/2018/02/23/22/05/brain-3176780_1280.png" alt="brain">
 
 ```
 
-9. Accessibility check
+9 - Accessibility check
 
 ![alt text](image.png)
 
 ##  CSS Criteria
 
-1. The same [CSS](styles.css) style is used for all three pages.
+1 - The same [CSS](styles.css) style is used for all three pages.
 
-2. Flex is used in header container for navigation links
+2 - Flex is used in header container for navigation links
 ```
 header {
     grid-area: header;
@@ -167,7 +167,7 @@ header {
 }
 ```
 
-3. Removed bullet points from navigation links
+3 - Removed bullet points from navigation links
 ```
 .navigation {
     width: 100%;
@@ -227,7 +227,7 @@ footer {
     grid-area: footer;
 }
 ```
-5. Grid Layout used 
+5 - Grid Layout used 
 
 ```
 body {
@@ -242,7 +242,7 @@ body {
 }
 ```
 
-6. The page is also responsive to size.
+6 -  The page is also responsive to size.
 
 ```
 @media (max-width: 500px) {
@@ -259,7 +259,7 @@ body {
 
 ## JavaScript Criteria
 
-1. User is able to look up people by their first name, surname or driving license number. People table is retrieved, for each item in the table, a person is created, and if their first name, surname, full name or license number matches, return the item and success message.
+1 - User is able to look up people by their first name, surname or driving license number. People table is retrieved, for each item in the table, a person is created, and if their first name, surname, full name or license number matches, return the item and success message.
 
 ```
 function replaceWithLowerCase(item) { // Function only used for turning string lower case, called many times
@@ -336,7 +336,7 @@ async function fetchData() {
 }
 ```
 
-2. User is able to look up vehicle registration number and all vehicle data is provided, including vehicle owner name. This works regardless of whether or not a car is assigned an owner.
+2 - User is able to look up vehicle registration number and all vehicle data is provided, including vehicle owner name. This works regardless of whether or not a car is assigned an owner.
 
 ```
 function matchingItems(item) {
@@ -418,7 +418,7 @@ form.addEventListener("submit", async (e) => { // Event must be async as functio
 });
 ```
 
-3. User is able to enter details for a new vehicle including the owner name. The people table is searched to check whether this person exists If the owner does not exist, a new form pops up providing a space to enter a new persons information. When both forms are filled and add owner is clicked, a new person will be added to the database, then a new vehicle is added with the new person as its owner.
+3 - User is able to enter details for a new vehicle including the owner name. The people table is searched to check whether this person exists If the owner does not exist, a new form pops up providing a space to enter a new persons information. When both forms are filled and add owner is clicked, a new person will be added to the database, then a new vehicle is added with the new person as its owner.
 
 ```
 function toString(item) {
