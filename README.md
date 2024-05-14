@@ -18,7 +18,7 @@
 3 - Meta data contains language, character set and title
 
 People Search:
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +27,7 @@ People Search:
     <title>People Search</title>
 ```
 Vehicle Search:
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +36,7 @@ Vehicle Search:
     <title>Vehicle Search</title>
 ```
 Add a Vehicle:
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,13 +46,13 @@ Add a Vehicle:
 ```
 
 4 - Heading and text elements used correctly
-```
+```html
     <h1>Add a Vehicle</h1>
 ```
 
 5 - Unordered list used to create navigation links
 
-```
+```html
 <ul class="navigation">
     <li><a href="people-search.html">People search</a></li>
     <li><a href="vehicle-search.html">Vehicle search</a></li>           
@@ -63,7 +63,7 @@ Add a Vehicle:
 6 - All pages share the same navigation links
 
 7 - Each page has four sections: header, footer, sidebar, main
-```
+```html
 <header>
     <h1>Add a Vehicle</h1>
     <ul class="navigation">
@@ -138,21 +138,19 @@ Add a Vehicle:
 </footer>
 ```
 8 - At least one image or video on each page
-```
+```html
 <img src="https://cdn.pixabay.com/photo/2018/02/23/22/05/brain-3176780_1280.png" alt="brain">
 
 ```
 
 9 - Accessibility check
 
-![alt text](image.png)
-
 ##  CSS Criteria
 
 1 - The same [CSS](styles.css) style is used for all three pages.
 
 2 - Flex is used in header container for navigation links
-```
+```css
 header {
     grid-area: header;
     display: flex;
@@ -168,7 +166,7 @@ header {
 ```
 
 3 - Removed bullet points from navigation links
-```
+```css
 .navigation {
     width: 100%;
     list-style-type: none;
@@ -182,7 +180,7 @@ header {
 ```
 
 4. Padding, margin and border added
-```
+```css
 header {
     grid-area: header;
     display: flex;
@@ -229,7 +227,7 @@ footer {
 ```
 5 - Grid Layout used 
 
-```
+```css
 body {
     display: grid;
     height:55vw;
@@ -244,7 +242,7 @@ body {
 
 6 -  The page is also responsive to size.
 
-```
+```css
 @media (max-width: 500px) {
     body {
     grid-template-columns: 1fr 1fr 5fr;
@@ -261,7 +259,7 @@ body {
 
 1 - User is able to look up people by their first name, surname or driving license number. People table is retrieved, for each item in the table, a person is created, and if their first name, surname, full name or license number matches, return the item and success message.
 
-```
+```js
 function replaceWithLowerCase(item) { // Function only used for turning string lower case, called many times
     let lowerCaseItem = item.replace(/[A-Z]/g, (match) => match.toLowerCase());
     return lowerCaseItem;
@@ -338,7 +336,7 @@ async function fetchData() {
 
 2 - User is able to look up vehicle registration number and all vehicle data is provided, including vehicle owner name. This works regardless of whether or not a car is assigned an owner.
 
-```
+```js
 function matchingItems(item) {
     const stringLine = "Registration Number: " + item.vehicleID + ", Make: " + item.make + ", Model: " + item.model +
     ", Colour: "+ item.colour + ", Vehicle Owner: " + item.owner + "</div>";
@@ -420,7 +418,7 @@ form.addEventListener("submit", async (e) => { // Event must be async as functio
 
 3 - User is able to enter details for a new vehicle including the owner name. The people table is searched to check whether this person exists If the owner does not exist, a new form pops up providing a space to enter a new persons information. When both forms are filled and add owner is clicked, a new person will be added to the database, then a new vehicle is added with the new person as its owner.
 
-```
+```js
 function toString(item) {
     return JSON.stringify(item).replace(/"/g, '') //Converts table item to a string
 }
